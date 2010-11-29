@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="LevelEditor" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="LevelEditor_d" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="LevelEditor" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="src\irrlicht-engine\include" />
+		</Compiler>
+		<Linker>
+			<Add library="src\irrlicht-engine\lib\Win32-gcc\libIrrlicht.a" />
+			<Add library="opengl32" />
+			<Add library="glu32" />
+		</Linker>
+		<Unit filename="src\LevelEditor\App.cpp" />
+		<Unit filename="src\LevelEditor\App.h" />
+		<Unit filename="src\LevelEditor\EElevator.cpp" />
+		<Unit filename="src\LevelEditor\EElevator.h" />
+		<Unit filename="src\LevelEditor\EElevator2X.cpp" />
+		<Unit filename="src\LevelEditor\EElevator2X.h" />
+		<Unit filename="src\LevelEditor\EGoal.cpp" />
+		<Unit filename="src\LevelEditor\EGoal.h" />
+		<Unit filename="src\LevelEditor\EMud.cpp" />
+		<Unit filename="src\LevelEditor\EMud.h" />
+		<Unit filename="src\LevelEditor\EPlatform.cpp" />
+		<Unit filename="src\LevelEditor\EPlatform.h" />
+		<Unit filename="src\LevelEditor\ERamp.cpp" />
+		<Unit filename="src\LevelEditor\ERamp.h" />
+		<Unit filename="src\LevelEditor\ERampEnd.cpp" />
+		<Unit filename="src\LevelEditor\ERampEnd.h" />
+		<Unit filename="src\LevelEditor\ERampFlat.cpp" />
+		<Unit filename="src\LevelEditor\ERampFlat.h" />
+		<Unit filename="src\LevelEditor\ERampStart.cpp" />
+		<Unit filename="src\LevelEditor\ERampStart.h" />
+		<Unit filename="src\LevelEditor\EStart.cpp" />
+		<Unit filename="src\LevelEditor\EStart.h" />
+		<Unit filename="src\LevelEditor\ETube2.cpp" />
+		<Unit filename="src\LevelEditor\ETube2.h" />
+		<Unit filename="src\LevelEditor\ETube2C.cpp" />
+		<Unit filename="src\LevelEditor\ETube2C.h" />
+		<Unit filename="src\LevelEditor\ETube2H.cpp" />
+		<Unit filename="src\LevelEditor\ETube2H.h" />
+		<Unit filename="src\LevelEditor\ETubeBig.cpp" />
+		<Unit filename="src\LevelEditor\ETubeBig.h" />
+		<Unit filename="src\LevelEditor\ETubeBigCurve.cpp" />
+		<Unit filename="src\LevelEditor\ETubeBigCurve.h" />
+		<Unit filename="src\LevelEditor\ETubeH.cpp" />
+		<Unit filename="src\LevelEditor\ETubeH.h" />
+		<Unit filename="src\LevelEditor\EWind.cpp" />
+		<Unit filename="src\LevelEditor\EWind.h" />
+		<Unit filename="src\LevelEditor\Element.cpp" />
+		<Unit filename="src\LevelEditor\Element.h" />
+		<Unit filename="src\LevelEditor\EventReceiver.h" />
+		<Unit filename="src\LevelEditor\mainLevelEditor.cpp" />
+		<Unit filename="src\tinyXML\tinystr.cpp" />
+		<Unit filename="src\tinyXML\tinystr.h" />
+		<Unit filename="src\tinyXML\tinyxml.cpp" />
+		<Unit filename="src\tinyXML\tinyxml.h" />
+		<Unit filename="src\tinyXML\tinyxmlerror.cpp" />
+		<Unit filename="src\tinyXML\tinyxmlparser.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

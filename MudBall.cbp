@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="MudBall" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="MudBall_d" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="MudBall" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="src\irrBullet-0.1.6\include" />
+			<Add directory="src\irrBullet-0.1.6\include\bheaders\Bullet\" />
+			<Add directory="include\" />
+			<Add directory="src\irrlicht-engine\lib\Win32-gcc" />
+			<Add directory="src\irrlicht-engine\include" />
+			<Add directory="src\irrKlang-1.3.0\include" />
+		</Compiler>
+		<Linker>
+			<Add library="glu32" />
+			<Add library="opengl32" />
+			<Add library="src\irrlicht-engine\lib\Win32-gcc\libIrrlicht.a" />
+			<Add library="src\irrBullet-0.1.6\lib\Release\libirrBullet.a" />
+			<Add library="src\irrBullet-0.1.6\lib\libbulletdynamics.a" />
+			<Add library="src\irrBullet-0.1.6\lib\libbulletsoftbody.a" />
+			<Add library="src\irrBullet-0.1.6\lib\libGIMPACTUtils.a" />
+			<Add library="src\irrBullet-0.1.6\lib\libbulletmath.a" />
+			<Add library="src\irrBullet-0.1.6\lib\libbulletcollision.a" />
+			<Add library="src\lib\wiiuse.lib" />
+			<Add library="src\irrKlang-1.3.0\lib\Win32-gcc\libirrKlang.a" />
+		</Linker>
+		<Unit filename="main.cpp" />
+		<Unit filename="src\App.cpp" />
+		<Unit filename="src\App.h" />
+		<Unit filename="src\EElevator.cpp" />
+		<Unit filename="src\EElevator.h" />
+		<Unit filename="src\EElevator2X.cpp" />
+		<Unit filename="src\EElevator2X.h" />
+		<Unit filename="src\EGoal.cpp" />
+		<Unit filename="src\EGoal.h" />
+		<Unit filename="src\EMud.cpp" />
+		<Unit filename="src\EMud.h" />
+		<Unit filename="src\EPlatform.cpp" />
+		<Unit filename="src\EPlatform.h" />
+		<Unit filename="src\ERamp.cpp" />
+		<Unit filename="src\ERamp.h" />
+		<Unit filename="src\ERampEnd.cpp" />
+		<Unit filename="src\ERampEnd.h" />
+		<Unit filename="src\ERampFlat.cpp" />
+		<Unit filename="src\ERampFlat.h" />
+		<Unit filename="src\ERampStart.cpp" />
+		<Unit filename="src\ERampStart.h" />
+		<Unit filename="src\ETube2.cpp" />
+		<Unit filename="src\ETube2.h" />
+		<Unit filename="src\ETube2C.cpp" />
+		<Unit filename="src\ETube2C.h" />
+		<Unit filename="src\ETube2H.cpp" />
+		<Unit filename="src\ETube2H.h" />
+		<Unit filename="src\ETubeBig.cpp" />
+		<Unit filename="src\ETubeBig.h" />
+		<Unit filename="src\ETubeBigCurve.cpp" />
+		<Unit filename="src\ETubeBigCurve.h" />
+		<Unit filename="src\ETubeH.cpp" />
+		<Unit filename="src\ETubeH.h" />
+		<Unit filename="src\EWind.cpp" />
+		<Unit filename="src\EWind.h" />
+		<Unit filename="src\Element.cpp" />
+		<Unit filename="src\Element.h" />
+		<Unit filename="src\EventReceiver.h" />
+		<Unit filename="src\XEffects\CScreenQuad.h" />
+		<Unit filename="src\XEffects\CShaderPre.cpp" />
+		<Unit filename="src\XEffects\CShaderPre.h" />
+		<Unit filename="src\XEffects\EffectCB.h" />
+		<Unit filename="src\XEffects\EffectHandler.cpp" />
+		<Unit filename="src\XEffects\EffectHandler.h" />
+		<Unit filename="src\XEffects\EffectShaders.h" />
+		<Unit filename="src\XEffects\XEffects.h" />
+		<Unit filename="src\tinyXML\tinystr.cpp" />
+		<Unit filename="src\tinyXML\tinystr.h" />
+		<Unit filename="src\tinyXML\tinyxml.cpp" />
+		<Unit filename="src\tinyXML\tinyxml.h" />
+		<Unit filename="src\tinyXML\tinyxmlerror.cpp" />
+		<Unit filename="src\tinyXML\tinyxmlparser.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

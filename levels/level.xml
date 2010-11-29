@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<b_level version="1.0">
+    <element type="5" x="0" y="0" z="0" rot="0" />
+    <element type="5" x="-2" y="0" z="0" rot="0" />
+    <element type="5" x="-4" y="0" z="0" rot="0" />
+    <element type="5" x="-4" y="0" z="2" rot="0" />
+    <element type="5" x="-2" y="0" z="2" rot="0" />
+    <element type="5" x="0" y="0" z="2" rot="0" />
+    <element type="5" x="0" y="0" z="-2" rot="0" />
+    <element type="5" x="-2" y="0" z="-2" rot="0" />
+    <element type="5" x="-4" y="0" z="-2" rot="0" />
+    <element type="5" x="2" y="0" z="-2" rot="0" />
+    <element type="5" x="2" y="0" z="2" rot="0" />
+    <element type="5" x="2" y="0" z="0" rot="0" />
+    <element type="6" x="2" y="-1" z="-4" rot="0" />
+    <element type="11" x="2" y="-1" z="-6" rot="90" />
+    <element type="13" x="0" y="-1" z="-6" rot="90" />
+    <element type="13" x="-2" y="-1" z="-6" rot="90" />
+    <element type="14" x="-4" y="-1" z="-6" rot="180" />
+    <element type="2" x="-4" y="-1" z="-4" rot="0" />
+    <element type="6" x="4" y="0" z="-2" rot="90" />
+    <element type="10" x="6" y="1" z="-2" rot="0" />
+    <element type="14" x="8" y="1" z="-2" rot="0" />
+    <element type="4" x="8" y="1" z="-4" rot="0" />
+    <element type="6" x="8" y="0" z="-6" rot="0" />
+    <element type="14" x="8" y="0" z="-8" rot="90" />
+    <element type="2" x="4" y="-1" z="-4" rot="0" />
+    <element type="10" x="-6" y="0" z="0" rot="0" />
+    <element type="11" x="-8" y="0" z="0" rot="180" />
+    <element type="11" x="-8" y="0" z="2" rot="270" />
+    <element type="10" x="-6" y="0" z="2" rot="0" />
+    <element type="17" x="-6" y="0" z="-2" rot="0" />
+    <element type="1" x="-6" y="-1" z="-4" rot="0" />
+    <element type="4" x="-6" y="-1" z="-6" rot="0" />
+    <element type="5" x="4" y="-1" z="-8" rot="0" />
+    <element type="8" x="6" y="-1" z="-8" rot="90" />
+    <element type="16" x="-2" y="0" z="4" rot="0" />
+    <element type="16" x="4" y="0" z="2" rot="90" />
+    <element type="3" x="4" y="-1" z="-10" rot="0" />
+</b_level>

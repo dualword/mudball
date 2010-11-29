@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="" />
+	<File name="..\include\collisionobject.h" open="0" top="0" tabpos="0">
+		<Cursor position="6160" topLine="171" />
+	</File>
+	<File name="..\include\irrbullet.h" open="0" top="0" tabpos="0">
+		<Cursor position="481" topLine="129" />
+	</File>
+	<File name="collisionobject.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="6830" topLine="338" />
+	</File>
+</CodeBlocks_layout_file>

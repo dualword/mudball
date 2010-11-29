@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<b_level version="1.0">
+    <element type="17" x="0" y="0" z="0" rot="0" />
+    <element type="1" x="0" y="0" z="2" rot="0" />
+    <element type="2" x="-2" y="1" z="4" rot="0" />
+    <element type="5" x="0" y="3" z="4" rot="0" />
+    <element type="5" x="2" y="3" z="4" rot="0" />
+    <element type="5" x="2" y="3" z="6" rot="0" />
+    <element type="8" x="2" y="2" z="8" rot="180" />
+    <element type="8" x="2" y="1" z="10" rot="180" />
+    <element type="8" x="0" y="0" z="12" rot="90" />
+    <element type="10" x="-2" y="-1" z="12" rot="0" />
+    <element type="10" x="-4" y="-1" z="12" rot="0" />
+    <element type="10" x="-6" y="-1" z="14" rot="90" />
+    <element type="11" x="-6" y="-1" z="12" rot="180" />
+    <element type="13" x="-6" y="-1" z="16" rot="0" />
+    <element type="13" x="-6" y="-1" z="18" rot="0" />
+    <element type="14" x="-6" y="-1" z="20" rot="270" />
+    <element type="15" x="-4" y="-2" z="20" rot="0" />
+    <element type="15" x="-2" y="-2" z="20" rot="0" />
+    <element type="3" x="0" y="-4" z="20" rot="0" />
+    <element type="11" x="2" y="1" z="12" rot="0" />
+</b_level>
