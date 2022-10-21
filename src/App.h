@@ -1,11 +1,13 @@
+//MudBall-mod https://github.com/dualword/mudball
 #ifndef APP_H
 #define APP_H
 
-#include "wiiuse.h"
+//#include "wiiuse.h"
 #include <irrlicht.h>
 #include <irrbullet.h>
 #include <vector>
-#include <irrklang.h>
+//#include <irrklang.h>
+//#include "tinyxml.h"
 #include <dirent.h>
 #include "XEffects/XEffects.h"
 
@@ -35,7 +37,7 @@ using namespace scene;
 using namespace video;
 using namespace io;
 using namespace gui;
-using namespace irrklang;
+//using namespace irrklang;
 
 using namespace std;
 
@@ -81,15 +83,15 @@ class App
         IVideoDriver* driver;
         IGUIEnvironment* guienv;
 
-        ISoundEngine* soundEngine;
+        //ISoundEngine* soundEngine;
 
         int screenWidth;
         int screenHeight;
         bool useEffects;
         bool fullScreen;
 
-        wiimote** wiimotes;
-        wiimote* wm;
+//        wiimote** wiimotes;
+//        wiimote* wm;
         bool usingWiiMote;
 
         float sensKeyboard;

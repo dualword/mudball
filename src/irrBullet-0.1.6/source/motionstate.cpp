@@ -1,3 +1,4 @@
+//MudBall-mod https://github.com/dualword/mudball
 #include "Bullet/btBulletDynamicsCommon.h"
 #include "Bullet/btBulletCollisionCommon.h"
 #include "motionstate.h"
@@ -66,9 +67,9 @@ void IMotionState::setWorldTransform(const btTransform &worldTrans)
         {
             wchar_t *str = 0;
 
-            wsprintfW( str, L"Object ( %s ) could not be updated.\n"),
-                object->getCollisionShape()->getSceneNode()->getName();
-            MessageBoxW(0, str, L"irrBullet Error", MB_OK | MB_ICONERROR );
+//            wsprintfW( str, L"Object ( %s ) could not be updated.\n"),
+//                object->getCollisionShape()->getSceneNode()->getName();
+//            MessageBoxW(0, str, L"irrBullet Error", MB_OK | MB_ICONERROR );
             failed = true;
         }
 

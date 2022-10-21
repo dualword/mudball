@@ -1,10 +1,11 @@
+//MudBall-mod https://github.com/dualword/mudball
 #include "Bullet/btBulletDynamicsCommon.h"
 #include "Bullet/btBulletCollisionCommon.h"
 #include <ISceneManager.h>
 #include <IFileSystem.h>
 #include "bulletworld.h"
 #include "collisionobject.h"
-#include "irrbullet_compile_config.h"
+//#include "irrbullet_compile_config.h"
 
 using namespace irr;
 using namespace core;
@@ -345,20 +346,20 @@ bool ICollisionObject::hasCollidedWithAttribute(irr::c8 *attributeName) const
     for(irr::u32 i=0; i < dynamicsWorld->getNumManifolds(); i++)
     {
         btPersistentManifold* manifold = dynamicsWorld->getPointer()->getDispatcher()->getManifoldByIndexInternal(i);
-        void* pointer = static_cast<btCollisionObject*>(manifold->getBody0())->getUserPointer();
+        void* pointer = static_cast<btCollisionObject*>((manifold->getBody0())->getUserPointer());
 
         bool whichOne = (getUniqueID() == static_cast<SCollisionObjectIdentification*>(pointer)->ID);
 
-        ICollisionObject* other = (!whichOne) ?
-        dynamicsWorld->getCollisionObjectByID(
-            static_cast<SCollisionObjectIdentification*>(static_cast<btCollisionObject*>(manifold->getBody0())->getUserPointer())->ID) :
-        dynamicsWorld->getCollisionObjectByID(
-            static_cast<SCollisionObjectIdentification*>(static_cast<btCollisionObject*>(manifold->getBody1())->getUserPointer())->ID);
-
-
-
-        if(other->getAttributes()->existsAttribute(attributeName))
-            return other;
+//        ICollisionObject* other = (!whichOne) ?
+//        dynamicsWorld->getCollisionObjectByID(
+//            static_cast<SCollisionObjectIdentification*>(static_cast<btCollisionObject*>(manifold->getBody0())->getUserPointer())->ID) :
+//        dynamicsWorld->getCollisionObjectByID(
+//            static_cast<SCollisionObjectIdentification*>(static_cast<btCollisionObject*>(manifold->getBody1())->getUserPointer())->ID);
+//
+//
+//
+//        if(other->getAttributes()->existsAttribute(attributeName))
+//            return other;
     }
 
     return false;

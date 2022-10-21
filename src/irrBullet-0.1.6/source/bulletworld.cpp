@@ -1,3 +1,4 @@
+//MudBall-mod https://github.com/dualword/mudball
 #include <IrrlichtDevice.h>
 #include <IGUIEnvironment.h>
 #include <IGUIStaticText.h>
@@ -6,7 +7,7 @@
 #include "Bullet/BulletCollision/Gimpact/btGImpactCollisionAlgorithm.h"
 #include "bulletworld.h"
 #include "raycastvehicle.h"
-#include "irrbullet_compile_config.h"
+//#include "irrbullet_compile_config.h"
 
 
 using namespace irr;

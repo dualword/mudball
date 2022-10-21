@@ -1,3 +1,4 @@
+//MudBall-mod https://github.com/dualword/mudball
 #include "collisioncallbackinformation.h"
 #include "Bullet/BulletCollision/CollisionDispatch/btCollisionObject.h"
 #include "collisionobject.h"
@@ -11,7 +12,7 @@ ICollisionCallbackInformation::ICollisionCallbackInformation(btPersistentManifol
 
 ICollisionObject* ICollisionCallbackInformation::getBody0() const
 {
-    void* pointer = static_cast<btCollisionObject*>(contactManifold->getBody0())->getUserPointer();
+    void* pointer = static_cast<btCollisionObject*>((contactManifold->getBody0())->getUserPointer());
 
     for(int i=0; i < dynamicsWorld->getNumCollisionObjects(); i++)
     {
@@ -23,7 +24,7 @@ ICollisionObject* ICollisionCallbackInformation::getBody0() const
 
 ICollisionObject* ICollisionCallbackInformation::getBody1() const
 {
-    void* pointer = static_cast<btCollisionObject*>(contactManifold->getBody1())->getUserPointer();
+    void* pointer = static_cast<btCollisionObject*>((contactManifold->getBody1())->getUserPointer());
 
     for(int i=0; i < dynamicsWorld->getNumCollisionObjects(); i++)
     {

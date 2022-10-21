@@ -1,3 +1,4 @@
+//MudBall-mod https://github.com/dualword/mudball
 #ifndef ELEMENT_H
 #define ELEMENT_H
 
@@ -37,6 +38,7 @@ enum ElementType
 class Element
 {
     public:
+	    Element();
         virtual ~Element();
 
         virtual void animate();

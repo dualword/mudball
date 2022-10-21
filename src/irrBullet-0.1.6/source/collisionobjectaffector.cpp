@@ -1,6 +1,7 @@
+//MudBall-mod https://github.com/dualword/mudball
 #include <iostream>
 #include "collisionobjectaffector.h"
-#include "irrbullet_compile_config.h"
+//#include "irrbullet_compile_config.h"
 
 ICollisionObjectAffector::ICollisionObjectAffector()
 {

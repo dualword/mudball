@@ -1,3 +1,4 @@
+//MudBall-mod https://github.com/dualword/mudball
 #include "App.h"
 #include "tinyXML/tinyxml.h"
 
@@ -13,7 +14,7 @@ using namespace io;
 using namespace gui;
 
 using namespace std;
-using namespace irrklang;
+//using namespace irrklang;
 
 App::App()
 {
@@ -27,7 +28,7 @@ App::App()
     smgr = device->getSceneManager();
     guienv = device->getGUIEnvironment();
 
-    soundEngine = createIrrKlangDevice();
+    //soundEngine = createIrrKlangDevice();
 
     EventReceiver* recv = new EventReceiver(device);
 
@@ -159,7 +160,7 @@ void App::runGame()
 
         if(ball->getPosition().Y < -10)
         {
-            soundEngine->play2D("media/loser.ogg");
+            //soundEngine->play2D("media/loser.ogg");
             resetGameVar = true;
         }
 
@@ -258,112 +259,112 @@ void App::eventKeyReleased(int key)
 
 void App::setupWiimote()
 {
-    wiimotes =  wiiuse_init(1);//inicializar 1 controle
-    wm = wiimotes[0];
-
-    if (!wiiuse_find(wiimotes, 1, 5))
-	{
-		printf ("No wiimotes found.");
-		return;
-	}
+//    wiimotes =  wiiuse_init(1);//inicializar 1 controle
+//    wm = wiimotes[0];
+//
+//    if (!wiiuse_find(wiimotes, 1, 5))
+//	{
+//		printf ("No wiimotes found.");
+//		return;
+//	}
 
 	usingWiiMote = true;
 
-	if (wiiuse_connect(wiimotes, 1))
-		printf("Connected to wiimote\n");
-	else
-	{
-		printf("Failed to connect to wiimote.\n");
-		exit(0);
-	}
-
-	wiiuse_set_leds(wm, WIIMOTE_LED_1);
+//	if (wiiuse_connect(wiimotes, 1))
+//		printf("Connected to wiimote\n");
+//	else
+//	{
+//		printf("Failed to connect to wiimote.\n");
+//		exit(0);
+//	}
+//
+//	wiiuse_set_leds(wm, WIIMOTE_LED_1);
 
     //ativar sensor de movimentos
-	wiiuse_motion_sensing(wiimotes[0], 1);
+	//wiiuse_motion_sensing(wiimotes[0], 1);
 }
 
 void App::cleanWiimote()
 {
-    wiiuse_cleanup(wiimotes, 1);
+    //wiiuse_cleanup(wiimotes, 1);
 }
 
 void App::checkWiimoteEvent()
 {
-    if(wiiuse_poll(wiimotes, 1))
-    {
-        switch (wm->event)
-        {
-            case WIIUSE_EVENT:
-
-                if (WIIUSE_USING_ACC(wm))
-                {
-                    //printf("wiimote roll  = %f [%f]\n", wm->orient.roll,wm->orient.a_roll);
-                    //printf("wiimote pitch = %f [%f]\n",wm->orient.pitch, wm->orient.a_pitch);
-                    //printf("wiimote yaw   = %f\n",wm->orient.yaw);
-
-                    roll = wm->orient.pitch;
-                    pitch = wm->orient.roll;
-
-                    float s = 30;
-
-                    pitch/=s;
-                    roll/=s;
-                }
-
-
-                if(wm->accel.z > 170)
-                {
-                    this->ballJump(50);
-                }
-
-                //printf("%d\n",ballBody->get());
-
-                if (IS_PRESSED(wm, WIIMOTE_BUTTON_HOME))
-                {
-                    run = false;
-                }
-
-                /*
-                //uncomment this if you want to reset the game with the wiimote A button
-                if (IS_PRESSED(wm, WIIMOTE_BUTTON_A) && ball->getPosition().Y < -20 )
-                {
-                    ball->setPosition(ballStart);
-                    ballBody->clearForces();
-                    ballBody->setLinearVelocity(vector3df(0,0,0));
-                    ballBody->setAngularVelocity(vector3df(0,0,0));
-                    ballBody->applyCentralForce(vector3df(0,-1,0));
-                    ballBody->setWorldTransform(ball->getAbsoluteTransformation());
-                }
-                */
-
-                /*
-                //move the ball with wiimote arrows
-                int force = 5;
-
-                if (IS_PRESSED(wm, WIIMOTE_BUTTON_UP))
-                    ballBody->applyCentralForce(vector3df(-force,0,0));
-                else if (IS_PRESSED(wm, WIIMOTE_BUTTON_DOWN))
-                    ballBody->applyCentralForce(vector3df(force,0,0));
-
-                if (IS_PRESSED(wm, WIIMOTE_BUTTON_LEFT))
-                    ballBody->applyCentralForce(vector3df(0,0,-force));
-                else if (IS_PRESSED(wm, WIIMOTE_BUTTON_RIGHT))
-                    ballBody->applyCentralForce(vector3df(0,0,force));
-
-                if (IS_PRESSED(wm, WIIMOTE_BUTTON_ONE))
-                    ballBody->applyCentralForce(vector3df(0,jumpForce,0));
-                */
-
-                if(IS_PRESSED(wm, WIIMOTE_BUTTON_PLUS)) camZoom += 1;
-                if(IS_PRESSED(wm, WIIMOTE_BUTTON_MINUS)) camZoom -= 1;
-
-                if(camZoom < 5) camZoom = 5;
-                if(camZoom > 25) camZoom = 25;
-
-                break;
-        }
-    }
+//    if(wiiuse_poll(wiimotes, 1))
+//    {
+//        switch (wm->event)
+//        {
+//            case WIIUSE_EVENT:
+//
+//                if (WIIUSE_USING_ACC(wm))
+//                {
+//                    //printf("wiimote roll  = %f [%f]\n", wm->orient.roll,wm->orient.a_roll);
+//                    //printf("wiimote pitch = %f [%f]\n",wm->orient.pitch, wm->orient.a_pitch);
+//                    //printf("wiimote yaw   = %f\n",wm->orient.yaw);
+//
+//                    roll = wm->orient.pitch;
+//                    pitch = wm->orient.roll;
+//
+//                    float s = 30;
+//
+//                    pitch/=s;
+//                    roll/=s;
+//                }
+//
+//
+//                if(wm->accel.z > 170)
+//                {
+//                    this->ballJump(50);
+//                }
+//
+//                //printf("%d\n",ballBody->get());
+//
+//                if (IS_PRESSED(wm, WIIMOTE_BUTTON_HOME))
+//                {
+//                    run = false;
+//                }
+//
+//                /*
+//                //uncomment this if you want to reset the game with the wiimote A button
+//                if (IS_PRESSED(wm, WIIMOTE_BUTTON_A) && ball->getPosition().Y < -20 )
+//                {
+//                    ball->setPosition(ballStart);
+//                    ballBody->clearForces();
+//                    ballBody->setLinearVelocity(vector3df(0,0,0));
+//                    ballBody->setAngularVelocity(vector3df(0,0,0));
+//                    ballBody->applyCentralForce(vector3df(0,-1,0));
+//                    ballBody->setWorldTransform(ball->getAbsoluteTransformation());
+//                }
+//                */
+//
+//                /*
+//                //move the ball with wiimote arrows
+//                int force = 5;
+//
+//                if (IS_PRESSED(wm, WIIMOTE_BUTTON_UP))
+//                    ballBody->applyCentralForce(vector3df(-force,0,0));
+//                else if (IS_PRESSED(wm, WIIMOTE_BUTTON_DOWN))
+//                    ballBody->applyCentralForce(vector3df(force,0,0));
+//
+//                if (IS_PRESSED(wm, WIIMOTE_BUTTON_LEFT))
+//                    ballBody->applyCentralForce(vector3df(0,0,-force));
+//                else if (IS_PRESSED(wm, WIIMOTE_BUTTON_RIGHT))
+//                    ballBody->applyCentralForce(vector3df(0,0,force));
+//
+//                if (IS_PRESSED(wm, WIIMOTE_BUTTON_ONE))
+//                    ballBody->applyCentralForce(vector3df(0,jumpForce,0));
+//                */
+//
+////                if(IS_PRESSED(wm, WIIMOTE_BUTTON_PLUS)) camZoom += 1;
+////                if(IS_PRESSED(wm, WIIMOTE_BUTTON_MINUS)) camZoom -= 1;
+//
+//                if(camZoom < 5) camZoom = 5;
+//                if(camZoom > 25) camZoom = 25;
+//
+//                break;
+//        }
+//    }
 }
 
 void App::loadLevel(stringc levelname)
@@ -534,7 +535,7 @@ void App::ballJump(int force)
     if(collided)
     {
         ballBody->applyCentralForce(vector3df(0,force,0));
-        soundEngine->play2D("media/ball_jump.ogg");
+        //soundEngine->play2D("media/ball_jump.ogg");
     }
 }
 

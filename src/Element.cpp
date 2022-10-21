@@ -1,3 +1,4 @@
+//MudBall-mod https://github.com/dualword/mudball
 #include "Element.h"
 
 using namespace std;
@@ -7,6 +8,8 @@ using namespace scene;
 using namespace video;
 using namespace io;
 using namespace gui;
+
+Element::Element(){}
 
 Element::~Element()
 {

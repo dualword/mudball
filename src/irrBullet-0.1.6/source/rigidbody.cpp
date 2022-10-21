@@ -1,3 +1,4 @@
+//MudBall-mod https://github.com/dualword/mudball
 #include "Bullet/btBulletDynamicsCommon.h"
 #include "Bullet/btBulletCollisionCommon.h"
 #include <ISceneManager.h>
@@ -5,7 +6,7 @@
 #include "rigidbody.h"
 #include "collisionshape.h"
 #include "motionstate.h"
-#include "irrbullet_compile_config.h"
+//#include "irrbullet_compile_config.h"
 
 using namespace irr;
 using namespace core;
@@ -179,11 +180,11 @@ void IRigidBody::applyTorqueImpulse(const vector3df &torque, ERBTransformSpace t
 void IRigidBody::internalApplyImpulse(const vector3df &linearComponent,
     const vector3df &angularComponent, f32 impulseMagnitude, ERBTransformSpace linTransformSpace, ERBTransformSpace angTransformSpace)
 {
-    getPointer()->internalApplyImpulse((linTransformSpace==ERBTS_WORLD) ? irrlichtToBulletVector(linearComponent) :
-        btVector3(getPointer()->getWorldTransform().getBasis()*irrlichtToBulletVector(linearComponent)),
-        (angTransformSpace==ERBTS_WORLD) ? irrlichtToBulletVector(angularComponent) :
-        btVector3(getPointer()->getWorldTransform().getBasis()*irrlichtToBulletVector(angularComponent)),
-        btScalar(impulseMagnitude));
+//    getPointer()->internalApplyImpulse((linTransformSpace==ERBTS_WORLD) ? irrlichtToBulletVector(linearComponent) :
+//        btVector3(getPointer()->getWorldTransform().getBasis()*irrlichtToBulletVector(linearComponent)),
+//        (angTransformSpace==ERBTS_WORLD) ? irrlichtToBulletVector(angularComponent) :
+//        btVector3(getPointer()->getWorldTransform().getBasis()*irrlichtToBulletVector(angularComponent)),
+//        btScalar(impulseMagnitude));
 }
 
 

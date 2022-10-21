@@ -1,3 +1,4 @@
+//MudBall-mod https://github.com/dualword/mudball
 #include "EStart.h"
 
 using namespace std;
@@ -15,7 +16,7 @@ EStart::EStart(ISceneManager* smgr)
     mesh = smgr->getMesh("media/p_plano.b3d");
     node = smgr->addMeshSceneNode(mesh);
 
-    type = ESTART;
+    type = ERESTART;
 }
 
 void EStart::setBulletPhysics(irrBulletWorld *world)
