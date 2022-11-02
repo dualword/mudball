@@ -2,13 +2,14 @@
 #ifndef APP_H
 #define APP_H
 
+//#include "wiiuse.h"
 #include <irrlicht.h>
 #include <irrbullet.h>
 #include <vector>
+//#include <irrklang.h>
 //#include "tinyxml.h"
 #include <dirent.h>
 #include "XEffects/XEffects.h"
-#include <SFML/Audio.hpp>
 
 #include "Element.h"
 #include "EElevator.h"
@@ -28,12 +29,15 @@
 #include "ERampStart.h"
 #include "ERampEnd.h"
 
+
+
 using namespace irr;
 using namespace core;
 using namespace scene;
 using namespace video;
 using namespace io;
 using namespace gui;
+//using namespace irrklang;
 
 using namespace std;
 
@@ -79,6 +83,8 @@ class App
         IVideoDriver* driver;
         IGUIEnvironment* guienv;
 
+        //ISoundEngine* soundEngine;
+
         int screenWidth;
         int screenHeight;
         bool useEffects;
@@ -112,7 +118,7 @@ class App
 
         int currentElement;
 
-        IGUIStaticText* gameTime, *fps;
+        IGUIStaticText* gameTime;
 
         static const int jumpForce = 250;
 
@@ -145,9 +151,6 @@ class App
         void clearEffects();
 
         bool win;
-
-        sf::SoundBuffer bufL, bufJ;
-        sf::Sound sndL, sndJ;
 };
 
 #endif // APP_H

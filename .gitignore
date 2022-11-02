@@ -1,6 +1,6 @@
 #
-mudball-editor
-mudball
+/mudball-editor
+/mudball
 #
 .build/
 Makefile
