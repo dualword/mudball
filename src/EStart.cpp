@@ -16,7 +16,7 @@ EStart::EStart(ISceneManager* smgr)
     mesh = smgr->getMesh("media/p_plano.b3d");
     node = smgr->addMeshSceneNode(mesh);
 
-    type = ERESTART;
+    type = ERAMPSTART;
 }
 
 void EStart::setBulletPhysics(irrBulletWorld *world)

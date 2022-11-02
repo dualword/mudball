@@ -14,7 +14,6 @@ using namespace io;
 using namespace gui;
 
 using namespace std;
-//using namespace irrklang;
 
 App::App()
 {
@@ -27,8 +26,6 @@ App::App()
     driver = device->getVideoDriver();
     smgr = device->getSceneManager();
     guienv = device->getGUIEnvironment();
-
-    //soundEngine = createIrrKlangDevice();
 
     EventReceiver* recv = new EventReceiver(device);
 
@@ -43,9 +40,7 @@ App::App()
     SLight & l = light->getLightData();
     l.Type = ELT_DIRECTIONAL;
 
-
     currentElement = EELEVATOR;
-
 
     levelRoot = smgr->addEmptySceneNode();
 
@@ -54,7 +49,10 @@ App::App()
 
     setupWiimote();
 
-
+    bufL.loadFromFile("media/loser.ogg");
+	sndL.setBuffer(bufL);
+    bufJ.loadFromFile("media/ball_jump.ogg");
+    sndJ.setBuffer(bufJ);
 
     //world->setDebugMode(EPDM_DrawAabb | EPDM_DrawContactPoints);
 
@@ -65,7 +63,8 @@ App::App()
     camZoom = 5;
 
     guienv->getSkin()->setFont(guienv->getFont("media/dialog.xml"));
-    gameTime = guienv->addStaticText(L"Time:0",rect<s32>(10,10,300,50));
+    fps = guienv->addStaticText(L"FPS:0",rect<s32>(10,10,300,50));
+    gameTime = guienv->addStaticText(L"Time:0",rect<s32>(10,60,300,100));
 
     ISceneNode* skybox=smgr->addSkyBoxSceneNode(
                 driver->getTexture("media/irrlicht2_up.jpg"),
@@ -160,7 +159,7 @@ void App::runGame()
 
         if(ball->getPosition().Y < -10)
         {
-            //soundEngine->play2D("media/loser.ogg");
+        	sndL.play();
             resetGameVar = true;
         }
 
@@ -228,6 +227,9 @@ void App::runGame()
         stringw timeStr = stringw("TIME: ");
         timeStr.append( stringw( (device->getTimer()->getTime() - currentLevelTime)*0.001) );
         gameTime->setText(timeStr.subString(0,timeStr.findFirst('.') + 2).c_str());
+        stringw f = L"FPS: ";
+        f.append( stringw( driver->getFPS()) );
+        fps->setText(f.c_str());
 
         if( ((EventReceiver*)device->getEventReceiver())->isKeyPressed(KEY_ESCAPE) )
         {
@@ -535,7 +537,7 @@ void App::ballJump(int force)
     if(collided)
     {
         ballBody->applyCentralForce(vector3df(0,force,0));
-        //soundEngine->play2D("media/ball_jump.ogg");
+    	sndJ.play();
     }
 }
 
